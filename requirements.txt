@@ -1,0 +1,9 @@
+# PDF parsing
+camelot-py[base]>=0.11.0
+opencv-python>=4.5.0
+
+# Data handling
+pandas>=1.3.0
+
+# Date parsing
+python-dateutil>=2.8.0

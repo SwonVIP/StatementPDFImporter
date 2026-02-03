@@ -8,18 +8,18 @@
 **pdf-importer** is a PDF parser for credit card statements.
 It accepts statement from the following issuers:
 
- - [Cembra & Cumulus](https://www.cembra.ch/en/cards/cembra-mastercard/) MasterCard
- - [SwissCard Cashback](https://www.swisscard.ch/en/private-customers/products) (AMEX / VISA / MasterCard)
+- [Cembra & Cumulus](https://www.cembra.ch/en/cards/cembra-mastercard/) MasterCard
+- [SwissCard Cashback](https://www.swisscard.ch/en/private-customers/products) (AMEX / VISA / MasterCard)
 
 The data can be saved to a CSV file compatible with [Wallet by budgetbakers](https://budgetbakers.com/) import feature.
 
 ## Dependencies
 
- - [Python 3.6](https://www.python.org/downloads/release/python-360/) and [pip 10.0](https://pip.pypa.io/en/stable/).
- - [camelot-py](https://camelot-py.readthedocs.io/en/master/) and
+- [Python 3.6](https://www.python.org/downloads/release/python-360/) and [pip 10.0](https://pip.pypa.io/en/stable/).
+- [camelot-py](https://camelot-py.readthedocs.io/en/master/) and
    [opencv-python](https://github.com/opencv/opencv-python) for PDF parsing.
- - [python-dateutil](https://dateutil.readthedocs.io/en/stable/) for date format management.
- - [pandas](https://pandas.pydata.org/) for CSV export.
+- [python-dateutil](https://dateutil.readthedocs.io/en/stable/) for date format management.
+- [pandas](https://pandas.pydata.org/) for CSV export.
 
 ## Installation
 
@@ -30,6 +30,21 @@ using [pip](https://pip.pypa.io/en/stable/):
 python -m pip install pdf-importer
 ```
 
+## Development Setup (Optional)
+
+For local development with an isolated virtual environment:
+
+```bash
+git clone https://github.com/c-vigo/StatementPDFImporter.git
+cd StatementPDFImporter
+python3 -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+pip install -e .
+```
+
+This installs the package in editable mode with all dependencies pinned for reproducible builds.
+
 ## Usage
 
 You can parse a PDF statement simply with
@@ -37,15 +52,16 @@ You can parse a PDF statement simply with
 ```
 python -m pdf_importer [filename] [type] [-o csv_file]
 ```
-where 
 
- - *filename* is the full path to the PDF file
- - *type* is either *cembra* or *cashback*
- - *csv_file* is the full path to the CSV file where the data is saved.
+where
+
+- *filename* is the full path to the PDF file
+- *type* is either *cembra* or *cashback*
+- *csv_file* is the full path to the CSV file where the data is saved.
 
 ## Authors
 
-* [**Carlos Vigo**](mailto:carviher1990@gmail.com?subject=[GitHub%-%pdf-importer]) - *Initial work* - 
+- [**Carlos Vigo**](mailto:carviher1990@gmail.com?subject=[GitHub%-%pdf-importer]) - *Initial work* -
 [GitHub](https://github.com/c-vigo)
 
 ## Contributing
@@ -55,7 +71,7 @@ conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [Git](https://git-scm.com/) for versioning. For the versions available, see the 
+We use [Git](https://git-scm.com/) for versioning. For the versions available, see the
 [tags on this repository](https://gitlab.ethz.ch/exotic-matter/cw-beam/pdf-importer).
 
 ## License
@@ -64,4 +80,4 @@ This project is licensed under the [GNU GPLv3 License](LICENSE.md)
 
 ## Built With
 
-* [PyCharm Professional 2020](https://www.jetbrains.com/pycharm//) - The IDE used
+- [PyCharm Professional 2020](https://www.jetbrains.com/pycharm//) - The IDE used
