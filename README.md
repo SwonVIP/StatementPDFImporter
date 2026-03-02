@@ -47,6 +47,8 @@ This installs the package in editable mode with all dependencies pinned for repr
 
 ## Usage
 
+### Parsing PDF statements
+
 You can parse a PDF statement simply with
 
 ```
@@ -58,6 +60,20 @@ where
 - *filename* is the full path to the PDF file
 - *type* is either *cembra* or *cashback*
 - *csv_file* is the full path to the CSV file where the data is saved.
+
+### Cleaning CSV files
+
+Bank-exported CSV files may contain double-quote characters (`"`) that are not supported by
+some import tools. You can remove them with the included CSV cleaner:
+
+```
+python -m pdf_importer.csv_cleaner [filename] [-o output_file]
+```
+
+where
+
+- *filename* is the full path to the CSV file to clean
+- *output_file* is the full path to the cleaned output file (optional; defaults to overwriting the input file).
 
 ## Authors
 

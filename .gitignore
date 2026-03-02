@@ -7,3 +7,6 @@
 /docs/source/api/
 .vscode/
 __pycache__/
+.venv/
+*.pdf
+*.csv
