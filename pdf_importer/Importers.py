@@ -20,7 +20,7 @@ def extract_cembra(filename):
             try:
                 date = parse(row[1].strip(), dayfirst=True).date()
                 _ = parse(row[0].strip(), dayfirst=True).date()
-                text = row[2]
+                text = row[2].replace("\n", " ")
                 credit = row[3].replace('\'', '')
                 debit = row[4].replace('\'', '')
                 amount = -float(debit) if debit else float(credit)
